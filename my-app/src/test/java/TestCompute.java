@@ -35,4 +35,12 @@ public class TestCompute {
     assertEquals(0, c.countNumberOfOccurrences("element"));
   }
 
+  @Test
+  public void testCountWhenQueueContainsElementOnce() {
+    when(mq.size()).thenReturn(1);
+    when(mq.contains(anyString())).thenReturn(true);
+    when(mq.getAt(anyInt())).thenReturn("element");
+    assertEquals(1, c.countNumberOfOccurrences("element"));
+  }
+
 }
