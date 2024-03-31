@@ -25,6 +25,12 @@ public class TestUtil {
   public void testComputeWithOddNumberOfElementsNoDivisor() {
     assertTrue(util.compute(1, 2, 4));
   }
+
+  @Test
+  public void testComputeWithNonDivisor() {
+    assertFalse(util.compute(5,4,8));
+  }
+
   @Test
   public void testComputeWithZeroArgument() {
     try {
