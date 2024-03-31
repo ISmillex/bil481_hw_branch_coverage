@@ -1,0 +1,4 @@
+my-app/target
+.Ds_Store
+.idea
+.idea/*
