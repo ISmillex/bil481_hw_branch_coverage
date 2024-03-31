@@ -28,4 +28,11 @@ public class TestCompute {
     assertEquals(0, c.countNumberOfOccurrences("element"));
   }
 
+  @Test
+  public void testCountWhenQueueDoesNotContainElement() {
+    when(mq.size()).thenReturn(1);
+    when(mq.contains(anyString())).thenReturn(false);
+    assertEquals(0, c.countNumberOfOccurrences("element"));
+  }
+
 }
