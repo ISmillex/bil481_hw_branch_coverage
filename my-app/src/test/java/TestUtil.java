@@ -16,4 +16,9 @@ public class TestUtil {
     assertFalse(util.compute(1));
   }
 
+  @Test
+  public void testComputeWithEvenNumberOfElements() {
+    assertFalse(util.compute(1, 2));
+  }
+
 }
