@@ -1,16 +1,19 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
+
 public class TestUtil {
-  Util c;
+  Util util;
 
   @Before
-  public void setUp() { c = new Util(); }
+  public void setUp() {
+    util = new Util();
+  }
 
   @Test
-  public void example() { assertTrue(true); }
+  public void testComputeWithSingleElement() {
+    assertFalse(util.compute(1));
+  }
+
 }
