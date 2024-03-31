@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TestUtil {
   Util util;
@@ -24,7 +23,15 @@ public class TestUtil {
 
   @Test
   public void testComputeWithOddNumberOfElementsNoDivisor() {
-    assertTrue(util.compute(1, 2, 3));
+    assertTrue(util.compute(1, 2, 4));
   }
-
+  @Test
+  public void testComputeWithZeroArgument() {
+    try {
+      util.compute(0, 1, 2);
+      fail();
+    } catch (RuntimeException e) {
+      assertTrue(true);
+    }
+  }
 }
